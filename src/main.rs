@@ -1,6 +1,11 @@
-mod reverse_string;
+mod bank_account;
 
 fn main() {
-    let sentence = String::from("Rust is a cool language");
-    reverse_string ::reverse_string(&sentence);
+    let mut user1 = bank_account::Account {
+        name:String::from("Akshat"),
+        amount:1000
+    };
+    user1.deposit(1000);
+    user1.withdraw(500);
+    user1.display();
 }
