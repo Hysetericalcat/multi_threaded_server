@@ -1,0 +1,21 @@
+1. Shell -> a intepretor that run shell scripts.
+2. bash/zsh -> shell scripting languages.
+3. zsh > bash -> due to more autocomplete scripts
+4. Interpretor -> line by line run ,compiler -> convert entire code into binary and run
+5. Flow:Shell -> kernel (os kernel) -> hardware
+6. Root:a profile that has full access in my system/User: me who needs permission 
+7. gave user to write inside the .bash_profile by chown command
+8. .bash_profile = scripts that runs for operation
+9. configured in .zshrc (so that it can find the neccesary binary files)
+10. rustc -> command compiles
+11. main function is special: It is always the first code that runs in every executable Rust program
+12.using a ! means that you’re calling a macro instead of a normal function and that macros don’t always follow the same rules as functions.
+13. Rust is an ahead-of-time compiled language, meaning you can compile a program and give the executable to someone else, and they can run it even without having Rust installed
+14.Cargo is Rust’s build system and package manager -> efficient in managing dependencies.
+15.Cargo init -> to initialise .toml file (package.json)
+16.Cargo run -> doesn't entirely rebuilds it.
+17.Cargo also provides a command called cargo check. This command quickly checks your code to make sure it compiles but doesn’t produce an executable
+18. std -> standard lib of rust
+19. Constants can be declared in any scope, including the global scope, which makes them useful for values that many parts of code need to know about.
+20.shadowing -> basically updation of variable
+ 
