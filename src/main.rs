@@ -1,5 +1,6 @@
-mod shapes;
+mod word_count;
 
 fn main() {
-  shapes::area(shapes::Shapes::Circle(3.0));
+  let sentence = String::from("Hello rust Hello rust");
+  word_count::word_count(&sentence);
 }
