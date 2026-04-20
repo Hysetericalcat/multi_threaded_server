@@ -4,24 +4,23 @@ pub struct Account {
 }
 
 impl Account {
-    pub fn new(name: &str, amount: u64) -> Account {
-        Account {
-            name: String::from(name),
-            amount,
-        }
+    pub fn new(name:String, amount: u64) -> Account {
+        let user = Account{name,amount:amount};
+        user
     }
+    
 
     pub fn deposit(&mut self,deposit:u64){ //&self -> for referencing
         self.amount = self.amount + deposit;
     }
 
-    pub fn withdraw(&mut self,withdraw:u64){
-        if self.amount<withdraw{
-            println!("insifficient balance!!");
-        }
-        else {
-        self.amount = self.amount - withdraw;
-        }
+    pub fn withdraw(&mut self,withdraw:u64)->Result<u64, String>{
+      if self.amount < withdraw {
+        Err(String::from("Insuffcient balance!"))
+      } else{
+            self.amount = self.amount - withdraw;
+            Ok(self.amount)
+      } 
     }
     pub fn display(&self){
         println!("Amount:{}",self.amount);
