@@ -1,11 +1,11 @@
-mod trait_shapes;
+mod minigrep;
+use std::env;
+use std::fs;
 
 fn main() {
-  let mut shape = trait_shapes::::new(String::from("Akshat"), 2000);
-  user1.deposit(300);
-  match user1.withdraw(1300){
-    Ok(result) => println!("Balance: {}", result),
-    Err(e) => println!("Error: {}", e)
-  };
-  user1.display();
+  let args: Vec<String> = env::args().collect();
+  let content = fs::read_to_string(&args[1]).expect("Should have been able to read the file");
+  let mut config = minigrep::Config{query:&args[2],filename: &args[1],content:&content};
+  let results = config.search();
+  dbg!(results);
 }
