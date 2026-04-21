@@ -1,5 +1,5 @@
-mod graph;
+mod threads;
 
 fn main() {
-  graph ::graph();
+  threads ::parellel_thread();
 }
