@@ -18,4 +18,5 @@
 18. std -> standard lib of rust
 19. Constants can be declared in any scope, including the global scope, which makes them useful for values that many parts of code need to know about.
 20.shadowing -> basically updation of variable
+21. Sometimes you know at runtime that only one thing is mutating at a time, but the compiler can't prove it at compile time — so it rejects your code even though it's actually safe...If two things could mutate the same data simultaneously you get data races — unpredictable results because both are changing memory at the same time.
  
